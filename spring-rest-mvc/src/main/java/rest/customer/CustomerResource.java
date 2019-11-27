@@ -22,8 +22,8 @@ public class CustomerResource {
 	private CustomerRepository customerRepository;
 	
 	@PostMapping
-	public Customer addCustomer(@Valid @RequestBody Customer customer) {
-		return customerRepository.save(customer);
+	public ResponseEntity<Customer> addCustomer(@Valid @RequestBody Customer customer) {
+		return ResponseEntity.ok(customerRepository.save(customer));
 	}
 	
 	@GetMapping

@@ -8,6 +8,8 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.validation.constraints.NotEmpty;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
+
 @Entity
 public class Customer implements Serializable{
 
@@ -18,6 +20,7 @@ public class Customer implements Serializable{
 	private Long id;
 	
 	@NotEmpty
+	@JsonProperty(value = "customer_name")
 	private String name;
 
 	public Long getId() {
