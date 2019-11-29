@@ -20,5 +20,7 @@ public class HelloWorldConfig {
 	public HelloWorldBean getBean() {
 		return new HelloWorldBean(url);
 	}
+	
+	
 
 }
